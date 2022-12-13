@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import JSONFile from './hackernews.json';
+import NavBar from './NavBar';
+import Hit from './Hit';
+import Footer from './Footer';
 
-function App() {
+export default function App() {
+  const myArray = Object.entries(JSONFile);
+  const hitsObjects = myArray[0][1];    //entries
+  //console.log(hitsObjects);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      {hitsObjects.map(hit => <Hit url={hit.url} title={hit.title} author={hit.author} points={hit.points} numComments={hit.num_comments}/>)}
+      <Footer />
     </div>
   );
 }
 
-export default App;
+
