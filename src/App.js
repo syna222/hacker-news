@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import JSONFile from './hackernews.json';
 import NavBar from './NavBar';
