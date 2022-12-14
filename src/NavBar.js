@@ -1,9 +1,13 @@
 export default function NavBar(){
 
     return (
-        <nav>
-            <img src="src/y18.png"/>
-            <a href="">Hacker News</a>
+        <nav className="nav">
+            <div className="nav-container">
+            <img src="https://news.ycombinator.com/y18.gif"  />
+
+          
+            
+            <a href="">Hackers News</a>
             <a href="">new</a> | 
             <a href="">past</a> |
             <a href="">comments</a> | 
@@ -12,6 +16,7 @@ export default function NavBar(){
             <a href="">jobs</a> | 
             <a href="">submit</a>
             <a href="">login</a>
+            </div>
         </nav>
     );
 
