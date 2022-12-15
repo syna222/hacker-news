@@ -66,6 +66,7 @@
 
 .nav-container {
 display: flex;
+justify-content: space-between;
  align-items: center;
  vertical-align: middle;
  padding: 5px;
@@ -81,8 +82,13 @@ display: flex;
   width: 100%;
   align-items: center;
   vertical-align: middle;
-  
+  font-size: 0.7rem;
   justify-content: center;
+}
+
+#login {
+  justify-content: end;
+  color: aqua;
 }
 
 #inhalt {

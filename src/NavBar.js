@@ -3,7 +3,8 @@ export default function NavBar(){
     return (
         <nav className="nav">
             <div className="nav-container">
-            <img src="https://news.ycombinator.com/y18.gif"  />
+            <div>
+                <img src="https://news.ycombinator.com/y18.gif"  />
 
           
             
@@ -15,7 +16,10 @@ export default function NavBar(){
             <a href="">show</a> | 
             <a href="">jobs</a> | 
             <a href="">submit</a>
-            <a href="">login</a>
+            </div>
+            <div>    
+                <a id="login" href="">login</a>
+            </div>
             </div>
         </nav>
     );
