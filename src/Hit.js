@@ -7,7 +7,9 @@ export default function Hit({rank, url, title, author, points, numComments}){
         <div id='inhalt'>
             <div className="index">
                 <span className='rank'>{rank}</span> | 
+            </div>
             
+            <div className="content">
                 <a href={url}>{title}</a>
                 <br />
                 <span className='subtext_color minor_height'>({author})</span> | 
