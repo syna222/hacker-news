@@ -1,4 +1,4 @@
-export default function Footer({onClick}){      //name of property, handed down by App-component
+export default function Footer({onClick, setSearch, search}){      //name of property, handed down by App-component
 
     return (
         <footer id='inhalt'>
@@ -16,8 +16,8 @@ export default function Footer({onClick}){      //name of property, handed down 
                 <div>
                     <form>
                         <span>Search:</span>
-                        <input id="input-text" type="text" />
-                        <input onClick={onClick} type="submit" value="go!"/>
+                        <input id="input-text" type="text" onChange={(e) => setSearch(e.target.value)}/> {/*onChange m function setSearch to e.target.value*/}
+                        {/*<input onClick={onClick} type="submit" value="go!"/>*/} 
                     </form>
                 </div>
             </div>
