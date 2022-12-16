@@ -1,7 +1,7 @@
 
 export default function Hit({rank, url, title, author, points, numComments}){
     
-    console.log({rank})
+    //console.log({rank})
     return (
         
         <div id='inhalt'>
