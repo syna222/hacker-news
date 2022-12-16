@@ -1,6 +1,4 @@
-export default function Footer(){
-
-
+export default function Footer({onClick}){      //name of property, handed down by App-component
 
     return (
         <footer id='inhalt'>
@@ -18,8 +16,8 @@ export default function Footer(){
                 <div>
                     <form>
                         <span>Search:</span>
-                        <input type="text" />
-                        <input type="submit" value="go!"/>
+                        <input id="input-text" type="text" />
+                        <input onClick={onClick} type="submit" value="go!"/>
                     </form>
                 </div>
             </div>
