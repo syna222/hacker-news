@@ -19,6 +19,7 @@ export default function Footer(){
                     <form>
                         <span>Search:</span>
                         <input type="text" />
+                        <input type="submit" value="go!"/>
                     </form>
                 </div>
             </div>
