@@ -3,14 +3,28 @@ import JSONFile from './hackernews.json';
 import NavBar from './NavBar';
 import Hit from './Hit';
 import Footer from './Footer';
-import Counter from './Counter'; 
+import { useState, useEffect } from 'react';
 
 export default function App() {
   const myArray = Object.entries(JSONFile);
   const hitsObjects = myArray[0][1];    //entries
-  // const counter
   //console.log(hitsObjects);
   
+  const [stories, setStories] = useState([]);
+
+  const URL = "https://hn.algolia.com/api/v1/search?query=react&tags=story";
+
+  useEffect(() => {
+    fetch(URL)
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.log(error));
+  });
+
+
+
+
+
   return (
     <div className="App">
       <NavBar />
